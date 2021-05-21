@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css?family=Fondamento|Nunito:300,400&display=swap');
+:root {
+    --crna: #292f36;    /* rgb(41, 47, 54) */
+    --zelena: #4ecdc4;  /* rgb(78, 205, 196) */
+    --bela: #fff;
+    --crvena: #ff6b6b;  /* rgb(255, 107, 107) */
+    --svetlosiva: #d3cdcd;
+    --transition:.3s ease;
+    --padding:80px 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fondamento', cursive;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+button {
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+/**************
+Grid
+**************/
+
+.row::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+.col-1 {width:8.33%;}
+.col-2 {width:16.66%;}
+.col-3 {width:25%;}
+.col-4 {width:33.33%;}
+.col-5 {width:41.66%;}
+.col-6 {width:50%;}
+.col-7 {width:58.33%;}
+.col-8 {width:66.66%;}
+.col-9 {width:75%;}
+.col-10 {width:83.33%;}
+.col-11 {width:91.66%;}
+.col-12 {width:100%;}
+
+/**************
+Header
+**************/
+
+header {
+    text-align: center;
+    background-image:linear-gradient(rgba(41, 47, 54,.9),rgba(41, 47, 54,.9)),url(../img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+header h1 {
+    color: var(--bela);
+    font-size: 4rem;
+    padding: 200px 0 20px 0;
+}
+
+header p {
+    color: var(--svetlosiva);
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+}
+
+header button {
+    background-color: transparent;
+    color: var(--crvena);
+    border: 2px solid var(--crvena);
+}
+
+header button:hover {
+    background-color: var(--crvena);
+    color: var(--bela);
+}
+
+/**************
+About
+**************/
+
+.about {
+    background-color: var(--svetlosiva);
+    padding: var(--padding);
+}
+
+.about .imageLeft {
+    background-image: url(../img/community.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+.about .imageLeft:hover,
+.about .imageRight:hover {
+    opacity: .7;
+    transition: var(--transition);
+}
+
+.about .imageRight {
+    background-image: url(../img/shop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+.about .row:first-child .col-6:last-child,
+.about .row:last-child .col-6:first-child {
+    background-color: var(--bela);
+    padding: 70px 70px 0 70px;
+    height: 400px;
+}
+
+.about .row:last-child .col-6:first-child {
+    text-align: right;
+}
+
+.about .row {
+    box-shadow: 0 0 20px gray;
+}
+
+.about .row:first-child {
+    margin-bottom: 50px;
+}
+
+.about .row h3 {
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+.about .row p {
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+}
+
+.about .row button,
+.gallery button,
+.community button {
+    background-color: transparent;
+    color: var(--crvena);
+    border: 2px solid var(--crvena);
+}
+
+.about .row button:hover,
+.gallery button:hover,
+.community button:hover {
+    background-color: var(--crvena);
+    color: var(--bela);
+}
+
+/**************
+Gallery
+**************/
+
+.gallery {
+    padding: var(--padding);
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 3rem;
+    color: var(--crvena);
+    padding-bottom: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px gray;
+}
+
+.gallery img:hover {
+    opacity: .7;
+    transition: var(--transition);
+} 
+
+.gallery .row .col-3 {
+    padding: 30px;
+}
+
+/**************
+Community
+**************/
+
+.community {
+    height: 100vh;
+    background-image:linear-gradient(rgba(41, 47, 54,.9),rgba(41, 47, 54,.9)) ,url(../img/community-section.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.community h2 {
+    color: var(--bela);
+    font-size: 3rem;
+    padding: 200px 0 20px 0;
+}
+
+.community p {
+    color: var(--svetlosiva);
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+}
+
+/**************
+Footer
+**************/
+
+footer {
+    background-color: var(--crvena);
+    padding: var(--padding);
+    height: 100vh;
+}
+
+.footer-container {
+    width: 50%;
+    margin: auto;
+}
+
+.footer-container h2 {
+    font-size: 2.5rem;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+footer label,
+footer input,
+footer textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+}
+
+footer input,
+footer textarea {
+    background-color: rgba(255,255,255,.2);
+}
+
+::placeholder {
+    color: gray;
+}
+
+footer button {
+    background-color: transparent;
+    color: var(--bela);
+    border: 2px solid var(--bela);
+    margin: 30px auto 30px auto;
+    display: block;
+}
+
+footer button:hover {
+    background-color: var(--zelena);
+}
+
+footer .row:last-child {
+    text-align: center;
+}
+
+footer a {
+    padding: 13px 20px;
+    background-color: var(--bela);
+    font-size: 2rem;
+    border-radius: 50%;
+    color: var(--crvena);
+    margin: 0 20px;
+}
+
+footer a:hover {
+    transition: var(--transition);
+    background-color: var(--zelena);
+    color: var(--bela);
+}
+
+
+/**************
+Responsive
+**************/
+@media(max-width:768px) {
+    
+    .container {
+        width: 90%;
+    }
+    
+    [class*="col-"] {
+        width: 100%;
+    }
+    
+    header {
+        height: 80vh;
+        padding: 0 30px;
+    }
+    
+    .community {
+        height: 80vh;
+        padding: 0 20px
+    }
+    
+    footer {
+        height: 90vh;
+    }
+    
+    .footer-container {
+        width: 90%;
+    }
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
